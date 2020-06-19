@@ -26,5 +26,5 @@ COPY --from=builder /opt/app-root/server.ts server.ts
 USER 1001
 
 ENV DENO_DIR=/opt/app-root/deno
-EXPOSE 3000/tcp
+EXPOSE 8080/tcp
 CMD [ "deno", "run", "--allow-net", "server.ts" ]
